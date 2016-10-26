@@ -52,6 +52,7 @@ func NewServer(addr string, group []*SiteConfig) (*Server, error) {
 		sites:       group,
 		connTimeout: GracefulTimeout,
 	}
+
 	s.Server.Handler = s // this is weird, but whatever
 	s.Server.ConnState = func(c net.Conn, cs http.ConnState) {
 		if cs == http.StateIdle {
