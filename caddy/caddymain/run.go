@@ -21,6 +21,11 @@ import (
 
 	"github.com/mholt/caddy/caddytls"
 	// This is where other plugins get plugged in (imported)
+
+	// My default plugins
+	_ "github.com/epicagency/caddy-expires"
+	_ "github.com/hacdias/caddy-minify"
+	_ "github.com/semrekkers/mailout"
 )
 
 func init() {
